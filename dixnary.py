@@ -17,7 +17,7 @@ try:
 
         part_of_speech = repo[r]['partOfSpeech']
         word_meanings = repo[r]['definitions']
-        print(f"PART OF SPEECH : {part_of_speech}\n")
+        print(f"\nPART OF SPEECH : ||{part_of_speech}||\n")
 
         for wm in word_meanings:
             try:
@@ -26,14 +26,14 @@ try:
                 synonyms = wm['synonyms']
                 antonyms = wm['antonyms']
 
-                print(f"MEANING : {definition}")
-                print(f"EXAMPLE : {example}\n")
+                print(f"\nMEANING : {definition}")
+                print(f"EXAMPLE : {example}")
 
                 if len(synonyms) > 0:
-                    print(f"SYNONYMS : {synonyms}\n")
+                    print(f"SYNONYMS : {synonyms}")
 
                 if len(antonyms) > 0:
-                    print(f"ANTONYMS : {antonyms}\n")
+                    print(f"ANTONYMS : {antonyms}")
 
             except KeyError:
                 pass
